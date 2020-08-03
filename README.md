@@ -18,9 +18,10 @@ Before running RTrans, ensure you have installed:
 
 ### Installing RTrans
 Next, clone RTrans GitHub repository:
-`
-git clone https://github.com/gskrasnov/RTrans.git
-`
+
+`git clone https://github.com/gskrasnov/RTrans.git
+cd RTrans`
+
 
 ### Preparing counts data
 Before launching RTrans, you need to prepare gene expression data. Typically, these are files with RNA-Seq read counts per gene derived with:
@@ -46,7 +47,7 @@ Here you can specify groups to be compared. One column - one comparison. One row
 **"0"** means control group (e.g. healthy individuals)
 **"1"** means target group (e.g. patients)
 
-Sample names should be present at the 1^st^ column
+Sample names should be present at the 1st column
 
 Alternatively, you can specify here ANOVA covariates and describe ANOVA/GLM model ("Models to test" parameter at "Basic parameters" sheet) like this: Age + Gender + Disease
 
@@ -57,6 +58,7 @@ That's almost all. Now you are ready to laucn RTrans.
 
 ###  run RTrans
 After filling up parameters \*.xlsx file, you can launch Rtrans. Go to the directory with `RTrans.parameters.xlsx` and `counts_data` folder and type:
+
 ` Rscript <path to RTrans.R>`
 
 Rtrans will scan parameteres \*.xlsx file, counts data, determine CPU count, available RAM and adjust the number of threads for parallel execution.
