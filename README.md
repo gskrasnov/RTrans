@@ -1,11 +1,26 @@
+# RTrans
+## a versatile RNA-Seq gene expression data analysis pipeline
 
-This scrpit is aimed at the analysis of RNA-Seq data:
-   - Differential expression: GLM multivariate testing (multiple groups and variates) or t-test (two groups)
-   - Two types of Gene Ontology, KEGG, Reactome enrichment analyses
-   - Visualization of KEGG pathways (MAPK, PI3K/mTOR, p53, etc.)
-   - Pathway-centric differential expression profiles
+### Main features:
+   - Differential expression: intra-group comparison, ANOVA/GLM, non-paramentric tests
+   - Gene set enrichment analysis (Gene Ontology, KEGG, Reactome, WikiPathways, Disease Ontology, DisGeNET, Network of Cancer Genes)
+   - KEGG pathways visualization
+   - Pathway-centric gene expression profiles
    - Detailed analysis of pre-defined functional groups of genes
-   - Creating heatmaps, PCA plots, Excel reports etc.
+   - Excel reports with embedded heatmaps and sparklines; heatmaps, MDS/PCA, etc.
+
+## Quick start
+### Requirements
+
+Before running RTrans, ensure you have installed:
+   - python3 (xlsxwriter, numpy packages are needed)
+   - R >= 3.6 (needed packages will be installed at first run)
+
+Next, clone RTrans GitHub repository:
+`
+git clone https://github.com/gskrasnov/RTrans.git
+`
+
 
 ###  To run RTrans you need:
    - derive read counts per gene files, which are generated with HTSeq-count, RSEM or featureCount. By default, *.counts files should be placed to 'counts' folder.
