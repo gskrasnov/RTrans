@@ -19,8 +19,11 @@ Before running RTrans, ensure you have installed:
 ### Installing RTrans
 Next, clone RTrans GitHub repository:
 
-`git clone https://github.com/gskrasnov/RTrans.git
-cd RTrans`
+`git clone https://github.com/gskrasnov/RTrans.git`
+
+move to the RTrans folder:
+
+`cd RTrans`
 
 
 ### Preparing counts data
@@ -63,4 +66,4 @@ After filling up parameters \*.xlsx file, you can launch Rtrans. Go to the direc
 
 Rtrans will scan parameteres \*.xlsx file, counts data, determine CPU count, available RAM and adjust the number of threads for parallel execution.
 
-All output results will be placed in the current folder.
+All output results will be placed in the current folder. Typically, one analysis required 1-2 hours (including differential expression, gene set enrichment tests, pathway visualization, plots, etc.)
